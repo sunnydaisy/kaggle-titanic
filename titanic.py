@@ -29,7 +29,7 @@ test.drop('Name',axis=1,inplace=True)
 
 
 sex_mapping = {'male':0,'female':1}
-for dataset in train_test_data:
+for dataset in train_test_data: 
     dataset['Sex'] = dataset['Sex'].map(sex_mapping)
 
 train['Age'].fillna(train.groupby('Title')['Age'].transform('median'), inplace=True)
